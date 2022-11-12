@@ -18,6 +18,14 @@ use Illuminate\Foundation\Http\FormRequest;
  *      maxLength=191,
  *   ),
  *   @OA\Property(
+ *      property="nickname",
+ *      type="string",
+ *      minLength=1,
+ *      maxLength=30,
+ *      description="User nickname",
+ *      example="JD",
+ *   ),
+ *   @OA\Property(
  *      property="email",
  *      type="string",
  *      minLength=1,
@@ -58,6 +66,7 @@ class UserStoreRequest extends FormRequest
         return [
             'name'     => 'required|string|max:191|min:1',
             'email'    => 'required|email|unique:users',
+            'nickname'    => 'required|string|unique:users',
             'password' => 'required|string|min:8|max:191',
         ];
     }
