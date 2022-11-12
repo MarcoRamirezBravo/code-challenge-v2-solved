@@ -12,7 +12,7 @@ use Illuminate\Foundation\Http\FormRequest;
  *   @OA\Property(
  *      property="name",
  *      type="string",
- *      example="Jane Doe",
+ *      example="Write Name",
  *      description="User name",
  *      minLength=1,
  *      maxLength=191,
@@ -20,6 +20,7 @@ use Illuminate\Foundation\Http\FormRequest;
  *   @OA\Property(
  *      property="nickname",
  *      type="string",
+ *      example="Write Nickname",
  *      minLength=1,
  *      maxLength=30,
  *      description="User nickname",
@@ -31,7 +32,7 @@ use Illuminate\Foundation\Http\FormRequest;
  *      minLength=1,
  *      maxLength=191,
  *      description="User email",
- *      example="JaneDoe@email.com",
+ *      example="new_email@email.com",
  *   ),
  *   @OA\Property(
  *      property="password",
@@ -39,7 +40,7 @@ use Illuminate\Foundation\Http\FormRequest;
  *      minLength=1,
  *      maxLength=191,
  *      description="User Password",
- *      example="correct horse battery staple",
+ *      example="write Password",
  *   ),
  * )
  */

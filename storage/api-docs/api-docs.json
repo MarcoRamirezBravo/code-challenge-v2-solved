@@ -173,7 +173,7 @@
                         "type": "string",
                         "maxLength": 191,
                         "minLength": 1,
-                        "example": "Jane Doe"
+                        "example": "Write Name"
                     },
                     "nickname": {
                         "description": "User nickname",
@@ -187,14 +187,14 @@
                         "type": "string",
                         "maxLength": 191,
                         "minLength": 1,
-                        "example": "JaneDoe@email.com"
+                        "example": "new_email@email.com"
                     },
                     "password": {
                         "description": "User Password",
                         "type": "string",
                         "maxLength": 191,
                         "minLength": 1,
-                        "example": "correct horse battery staple"
+                        "example": "write Password"
                     }
                 },
                 "type": "object"
