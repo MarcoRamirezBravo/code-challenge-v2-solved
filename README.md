@@ -40,3 +40,12 @@ The assignment is to add a column named `nickname` (via a migration) to the data
 - Tests can be run by executing the following commands:
   - `docker exec -it mysql bash -c "mysql -u root -ppassword -e \"DROP DATABASE IF EXISTS testing; CREATE DATABASE testing\""` (creates the test DB)
   - `docker-compose run --rm php php /var/www/artisan test` (runs the tests)
+
+### SOLUTION
+
+1. First create a new migration with php artisan make:migration add_nickname_to_users_table --table=users
+2. Edit the migration file adding the new field. Edit Up and Down method, specify is a String
+3. Run new migration to add new field to DB (Run php artisan migrate)
+4. Add new field to User Model
+5. Add to field to Mapper (User mapper)
+6. Edit the UserController methods for store and update

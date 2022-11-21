@@ -24,6 +24,7 @@ class UserMapperTest extends FrameworkTest
         $user = $this->userFactory->create([
             'name'     => 'Anakin Skywalker',
             'email'    => 'Vader@Empire.com',
+            'nickname'    => 'AS',
             'password' => Hash::make('IHateSand123'),
         ]);
         $result = $this->userMapper->single($user);
@@ -31,6 +32,7 @@ class UserMapperTest extends FrameworkTest
             [
                 'id'    => $user->id,
                 'name'  => $user->name,
+                'nickname'  => $user->nickname,
                 'email' => $user->email,
             ],
             $result
